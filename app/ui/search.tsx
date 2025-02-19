@@ -16,7 +16,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
       console.info("params.toString()", params.toString());
 
       replace(`${pathname}?${params.toString()}`); // ${pathname}?${params.toString()} => /dashboard/invoices?query=Delba+de+Oliveira
-    }, 500);
+    }, 300);
   // useSearchParams- Allows you to access the parameters of the current URL. For example, the search params for this URL /dashboard/invoices?page=1&query=pending would look like this: {page: '1', query: 'pending'}.
 
   // URLSearchParams is a Web API that provides utility methods for manipulating the URL query parameters. Instead of creating a complex string literal, you can use it to get the params string like ?page=1&query=a
