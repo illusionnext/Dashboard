@@ -18,9 +18,8 @@ export default async function Page() {
           },
         ]}
       />
-      <Suspense>
-        <Form customers={customers} />
-      </Suspense>
+
+      <Form customers={customers} />
     </main>
   );
 }
