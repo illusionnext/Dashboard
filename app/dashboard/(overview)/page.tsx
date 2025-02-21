@@ -1,6 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-import { randomUUID } from "crypto";
-
 import { Suspense } from "react";
 import {
   RevenueChartSkeleton,
@@ -11,16 +8,14 @@ import CardWrapper from "@/app/ui/dashboard/cards";
 import RevenueChart from "@/app/ui/dashboard/revenue-chart";
 import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
 import { lusitana } from "@/app/ui/fonts";
+// import UUID from "@/app/ui/uuid";
 
 const Page = async () => {
-  const uuidLibrary = uuidv4(),
-    uuidNative = crypto.randomUUID();
-
-  console.log("uuid library", uuidLibrary); //This code only work in .log not in .dir
-  console.log("uuid native", uuidNative); //Support only in modern browsers
-  console.log("uuid nodejs", randomUUID()); //Support only in modern browsers Node.js v16.6.0 or later
   return (
     <main>
+      {/*<Suspense fallback={<div>Loading UUID...</div>}>*/}
+      {/*  <UUID />*/}
+      {/*</Suspense>*/}
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>

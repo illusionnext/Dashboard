@@ -32,7 +32,9 @@ export default async function Page(props: {
         <Table query={query} currentPage={currentPage} />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">
-        <Pagination totalPages={totalPages} />
+        <Suspense fallback="...">
+          <Pagination totalPages={totalPages} />
+        </Suspense>
       </div>
     </div>
   );

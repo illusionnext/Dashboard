@@ -9,7 +9,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     pathname = usePathname(),
     { replace } = useRouter(),
     handleSearch = useDebouncedCallback((term) => {
-      const params = new URLSearchParams(searchParams);
+      const params = new URLSearchParams(searchParams); // {page: '1', query: 'Delba de Oliveira'}
       params.set("page", "1"); //?page=1 Default to the first page when the user searches for a new term.
       term ? params.set("query", term) : params.delete("query"); //?page=1&query=Delba+de+Oliveira
       console.info("search term", term);
