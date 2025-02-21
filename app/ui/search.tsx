@@ -29,7 +29,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   // Wait: If a new event occurs before the timer expires, the timer is reset.
   // Execution: If the timer reaches the end of its countdown, the debounced function is executed.
   return (
-    <div className="relative flex flex-1 flex-shrink-0">
+    <div className="relative flex flex-1 shrink-0">
       <label htmlFor="search" className="sr-only">
         Search
       </label>
